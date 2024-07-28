@@ -65,21 +65,21 @@ function App() {
           </div>
 
           <div className="mt-6 w-full gap-6 rounded border border-system-purple20 bg-system-purple80 bg-opacity-10 p-4 text-gray-400 sm:flex">
-            <div className="flex w-3/4 flex-col items-start justify-start gap-4">
+            <div className="hidden w-3/4 flex-col items-start justify-start gap-4 md:flex">
               <a
                 href={AlgorithmDescriptionObjectDict[sortingAlgorithm]?.link}
                 target="_blank"
               >
-                <span className="hidden text-xl hover:underline sm:block">
+                <span className="hidden text-xl hover:underline md:block">
                   {AlgorithmDescriptionObjectDict[sortingAlgorithm]?.title}
                 </span>
               </a>
-              <p className="text-md hidden sm:block">
+              <p className="hidden text-sm sm:block lg:text-lg">
                 {AlgorithmDescriptionObjectDict[sortingAlgorithm]?.description}
               </p>
             </div>
 
-            <div className="flex flex-col items-center gap-4 sm:w-1/4 sm:items-start sm:justify-start">
+            <div className="flex flex-col items-center gap-4 text-sm sm:w-1/4 sm:items-start sm:justify-start lg:text-lg">
               <a
                 href="https://zh.wikipedia.org/zh-tw/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"
                 target="_blank"
@@ -116,7 +116,7 @@ function App() {
             </div>
           </div>
 
-          <div className="relative h-[calc(100vh-66px)] w-full">
+          <div className="relative mb-[80px] h-[calc(100vh-66px)] w-full sm:mb-0">
             <div className="absolute bottom-[32px] left-0 right-0 mx-auto flex w-full items-end justify-center">
               {arrayToSort.map((value, index) => (
                 <div
