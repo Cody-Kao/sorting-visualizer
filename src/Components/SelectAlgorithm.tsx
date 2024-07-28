@@ -18,10 +18,14 @@ export default function SelectAlgorithm({
         disabled={isDisabled}
         onChange={handleChange}
         defaultValue={defaultOption}
-        className="bg-system-purple10 border-system-purple20 focus:shadow-outline block h-8 w-full appearance-none rounded-lg border px-4 py-1 pr-8 leading-tight text-gray-300 shadow focus:outline-none"
+        className="focus:shadow-outline block h-8 w-full appearance-none rounded-lg border border-system-purple20 bg-system-purple10 px-4 py-1 pr-8 leading-tight text-gray-300 shadow focus:outline-none"
       >
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option
+            className="text-md md:text-lg"
+            key={option.value}
+            value={option.value}
+          >
             {option.label}
           </option>
         ))}
