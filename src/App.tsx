@@ -37,7 +37,7 @@ function App() {
           id="content-container"
           className="flex w-full max-w-[1020px] flex-col px-4 lg:px-0"
         >
-          <div className="relative flex h-[66px] w-full items-center justify-between text-[1.2rem]">
+          <div className="relative flex h-[66px] w-full items-center justify-center text-[1.2rem] md:justify-between">
             <h1 className="hidden text-2xl font-light text-gray-300 md:flex">
               Sorting Visulizer
             </h1>
@@ -74,12 +74,12 @@ function App() {
                   {AlgorithmDescriptionObjectDict[sortingAlgorithm]?.title}
                 </span>
               </a>
-              <p className="hidden text-sm sm:block lg:text-lg">
+              <p className="text-sm lg:text-lg">
                 {AlgorithmDescriptionObjectDict[sortingAlgorithm]?.description}
               </p>
             </div>
 
-            <div className="flex flex-col items-center gap-4 text-sm sm:w-1/4 sm:items-start sm:justify-start lg:text-lg">
+            <div className="md:text-md flex w-full flex-col items-center justify-center gap-4 text-sm md:w-1/4 md:items-start md:justify-start lg:text-lg">
               <a
                 href="https://zh.wikipedia.org/zh-tw/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"
                 target="_blank"
@@ -87,14 +87,14 @@ function App() {
               >
                 Time Complexity
               </a>
-              <p className="flex w-full flex-col items-center gap-2 text-gray-500 sm:items-start">
-                <span className="flex justify-start gap-5">
+              <p className="flex w-full flex-col items-center gap-3 text-gray-500 md:items-start">
+                <span className="flex justify-start gap-2 lg:gap-4">
                   Best Case:
                   <span>
                     {AlgorithmDescriptionObjectDict[sortingAlgorithm]?.bestCase}
                   </span>
                 </span>
-                <span className="flex justify-start gap-5">
+                <span className="flex justify-start gap-2 lg:gap-4">
                   Average Case:
                   <span>
                     {
@@ -103,7 +103,7 @@ function App() {
                     }
                   </span>
                 </span>
-                <span className="flex justify-start gap-5">
+                <span className="flex justify-start gap-2 lg:gap-4">
                   Worst Case:
                   <span>
                     {
